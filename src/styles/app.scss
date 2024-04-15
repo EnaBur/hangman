@@ -1,0 +1,18 @@
+* {
+    background-color: #1D283A;
+    color: #FFFFFF;
+
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 100px;
+    align-items: stretch;
+}
+
+
+@import "./abc";
+@import "./nav";
+@import "./term";

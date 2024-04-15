@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    color: #FFFFFF;
+    width: 100%;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 20px;
+}
+
+.menu {
+    align-self: flex-start;
+    margin-left: 15px;
+}
+
+.lives{
+    align-self: flex-end;
+    margin-right: 15px;
+}
+
+.fa-heart {
+    padding-left: 5px;
+}
