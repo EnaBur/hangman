@@ -1,7 +1,7 @@
 {
   "name": "hangman",
   "version": "0.1.0",
-  "homepage": "https://enabur.github.io/hangman",
+  "homepage": "https://enabur.github.io/hangman/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
