@@ -1,13 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import lettersExport from "../letters";
 
-const Abc = () => {
+const Abc = ({ handleLetterClick, clickedLetters }) => {
     const letters = lettersExport();
-    const [clickedLetters, setClickedLetters] = useState([]);
+
+    /*const [clickedLetters, setClickedLetters] = useState([]);
     const handleLetterClick = (letter) => {
         console.log("Letter clicked:", letter);
         setClickedLetters([...clickedLetters, letter]);
-    };
+    };*/
     const isLetterClicked = (letter) => {
         return clickedLetters.includes(letter);
     };
