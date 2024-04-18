@@ -6,10 +6,12 @@
     gap: 10px;
     width: 70%;
     margin-left: 15%;
+    flex-direction: column;
 }
 
 .guess {
     align-items: center;
+    display: flex;
     appearance: none;
     background-color: #FCFCFD;
     border-radius: 4px;
