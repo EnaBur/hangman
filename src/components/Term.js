@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 
-
-const Term = ({ clickedLetters, selectedCategory, movieNames }) => {
+const Term = ({ clickedLetters, selectedCategory, movieNames, handleCorrectGuess }) => {
   const [currentTerm, setCurrentTerm] = useState('');
 
   // Function to select a random movie title from movieNames array
@@ -23,36 +22,30 @@ const Term = ({ clickedLetters, selectedCategory, movieNames }) => {
     }
   }, [movieNames, updateTerm]);
 
+  // Function to check if a letter is clicked
+  const isLetterClicked = (letter) => {
+    return clickedLetters.includes(letter);
+  };
+
+  // Function to update the classname of divs based on correct guesses
+  const getClassName = (letter) => {
+    return isLetterClicked(letter) ? 'guess correct' : 'guess';
+  };
+
   return (
     <div className="term">
       <div className="subject">
         {currentTerm && typeof currentTerm === 'string' && (
-            currentTerm.split('').map((letter, index) => (
-            <div className="guess" key={index}>{letter}</div>
-            ))
+          currentTerm.split('').map((letter, index) => (
+            <div className={getClassName(letter)} key={index}>{letter}</div>
+          ))
         )}
       </div>
       <button className="button-30" onClick={updateTerm}>
         Change Term
-        </button>
+      </button>
     </div>
   );
 };
 
 export default Term;
-
-
-
-
-
-{/*
-return(
-        <div className = "term">
-
-{clickedLetters.map((letter, index) => (
-    <div className="guess" key={index}>{letter}</div>
-))}
-</div>
-);
-};
-*/}

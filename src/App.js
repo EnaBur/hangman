@@ -47,7 +47,7 @@ function App() {
     const options = {
       method: 'GET',
       headers: {
-        'Authorization': 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0M2U5NTEzOTlmYzczZjAyNGQ4MWJhZjU2ZTkyMGQxNSIsInN1YiI6IjY2MjBjNWFkMGQxMWYyMDEzMTAwZjAxZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.wxmaqvg0FX0lBzvLHfsW99D9jpDFf8TWq5Th5O19eaA',
+        'Authorization': 'process.env.REACT_APP_API_KEY',
         'Accept': 'application/json'
       }
     };
