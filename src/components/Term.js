@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 
+
 const Term = ({ clickedLetters, selectedCategory, movieNames }) => {
   const [currentTerm, setCurrentTerm] = useState('');
 
@@ -31,7 +32,9 @@ const Term = ({ clickedLetters, selectedCategory, movieNames }) => {
             ))
         )}
       </div>
-      <button onClick={updateTerm}>Change Term</button>
+      <button className="button-30" onClick={updateTerm}>
+        Change Term
+        </button>
     </div>
   );
 };

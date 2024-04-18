@@ -43,7 +43,7 @@ function App() {
   const categories = ['Movies', 'Countries', 'Books']; // Example categories
 
   const fetchMovieNames = async () => {
-    const url = 'https://api.themoviedb.org/3/search/movie?query=Batman';
+    const url = 'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc';
     const options = {
       method: 'GET',
       headers: {
@@ -60,6 +60,7 @@ function App() {
       const data = await response.json();
       const movieNames = data.results.map(movie => movie.title);
       setMovieNames(movieNames);
+      console.log(movieNames);
     } catch (error) {
       console.error("Error fetching movie names:", error);
     }

@@ -7,6 +7,11 @@
     width: 70%;
     margin-left: 15%;
     flex-direction: column;
+    button {
+        margin-top: 40px;
+        color: red;
+        box-shadow: hsl(0, 84%, 55%) 0 2px 4px,hsl(0, 84%, 55%) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+    }
 }
 
 .guess {
